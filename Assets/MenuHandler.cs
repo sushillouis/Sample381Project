@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,10 +17,25 @@ public class MenuHandler : MonoBehaviour
     {
         
     }
-    
+
     public void LoadGameLevel1()
     {
         SceneManager.LoadSceneAsync(1);
+    }
+
+    public void LoadScoreScreen()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }

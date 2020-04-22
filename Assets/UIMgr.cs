@@ -12,6 +12,7 @@ public class UIMgr : MonoBehaviour
     }
 
     public Text Score;
+    public int score;
     public Text Health;
 
     // Start is called before the first frame update
@@ -25,9 +26,11 @@ public class UIMgr : MonoBehaviour
     void Update()
     {
         if(lives > 0) {
-            Score.text = (Mathf.RoundToInt(Time.realtimeSinceStartup)).ToString("D3");
+            score = Mathf.RoundToInt(Time.realtimeSinceStartup);
+            Score.text = score.ToString("D3");
         } else {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            PlayerPrefs.SetInt("Score", score);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }
     }
 
