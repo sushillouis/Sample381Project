@@ -15,7 +15,12 @@ public class TextFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startFontSize = GetComponentInParent<Text>().fontSize;
+        Text t = GetComponentInParent<Text>();
+        if (t != null)
+            startFontSize = GetComponentInParent<Text>().fontSize;
+        else
+            startFontSize = minFontSize;
+
     }
     public ETextFX effect;
 

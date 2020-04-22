@@ -33,7 +33,7 @@ public class OnCollision : MonoBehaviour
             entityUAI.StopAndRemoveAllCommands();
             entity.speed = entity.desiredSpeed = 0;
             entity.GetComponent<AudioSource>().Stop();
-            UIMgr.inst.UpdateHealth(entity);
+            LevelMgr.inst.UpdateHealth(entity);
         }
     }
     public EState priorState;

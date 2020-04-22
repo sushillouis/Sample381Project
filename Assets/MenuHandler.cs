@@ -20,17 +20,17 @@ public class MenuHandler : MonoBehaviour
 
     public void LoadGameLevel1()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
     }
 
     public void LoadScoreScreen()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
     }
 
     public void QuitGame()

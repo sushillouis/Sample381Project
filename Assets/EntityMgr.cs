@@ -14,6 +14,9 @@ public class EntityMgr : MonoBehaviour
         }
     }
 
+    public GameObject ObstaclesRoot;
+    public List<GameObject> obstacles = new List<GameObject>();
+
     public GameObject movableEntitiesRoot;
     public List<GameObject> entityPrefabs;
     public GameObject entitiesRoot;

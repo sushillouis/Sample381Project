@@ -26,6 +26,8 @@ public class ProxyEntity : MonoBehaviour
         positions.Add(transform.localPosition);
         entity.velocity = VelocityFromPositions(positions);
         entity.speed = entity.velocity.magnitude;
+
+        //
     }
 
     public Vector3 VelocityFromPositions(List<Vector3> positions)
@@ -36,4 +38,5 @@ public class ProxyEntity : MonoBehaviour
         }
         return diffSum/(positions.Count - 1);
     }
+
 }

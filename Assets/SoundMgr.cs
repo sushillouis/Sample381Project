@@ -23,6 +23,7 @@ public class SoundMgr : MonoBehaviour
     public AudioSource ballBall;
     public AudioSource ballEthan;
     public AudioSource ballCube;
+    public AudioSource coinEthan;
 
     public void Play(AudioSource sound)
     {
